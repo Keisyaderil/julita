@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(179, 184, 233), rgb(2, 45, 80));
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Menyelaraskan konten secara vertikal */
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    text-align: center; /* Menyelaraskan teks di tengah */
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: rotateFlower 10s infinite linear; /* Animasi bunga berputar */
+  }
+  
+  .petal {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgb(216, 47, 61);
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    transform-origin: 30px 30px;
+  }
+  
+  /* Buat 6 kelopak */
+  .petal:nth-child(1) { transform: rotate(0deg) translateX(40px); }
+  .petal:nth-child(2) { transform: rotate(60deg) translateX(40px); }
+  .petal:nth-child(3) { transform: rotate(120deg) translateX(40px); }
+  .petal:nth-child(4) { transform: rotate(180deg) translateX(40px); }
+  .petal:nth-child(5) { transform: rotate(240deg) translateX(40px); }
+  .petal:nth-child(6) { transform: rotate(300deg) translateX(40px); }
+  
+  .center {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  /* Animasi bunga berputar */
+  @keyframes rotateFlower {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .flower-text {
+    margin-top: 20px; /* Memberikan jarak antara bunga dan teks */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .flower-image {
+    margin-top: 20px; /* Memberikan jarak antara teks dan gambar */
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  
